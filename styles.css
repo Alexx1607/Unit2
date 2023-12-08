@@ -25,35 +25,123 @@ h1, h2 {
 }
 
 .monitorizare-resurse img {
-    width: 10%;
+    width: 400px;
+    height: auto;
     border-radius: 8px;
     margin-top: 10px;
 }
 
-.slide-show {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    height: 10%;
+.diagrama-retea {
+    text-align: center;
 }
 
-.slide {
-    width: 10%;
-    flex: 0 0 10%;
-    height: 100%;
+.diagrama-container {
+    position: relative;
+    display: inline-block;
+}
+
+.diagrama-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-stanga {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    text-align: left;
+    color: #333;
+}
+
+.text-stanga p {
+    margin: 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.animatie-imagine {
+    position: absolute;
+    transition: transform 5s ease-in-out;
+}
+
+.animatie-start {
+    transform: translateX(calc(100% + 10px));
+}
+
+@keyframes slideAnim {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(110px); }
+    50% { transform: translateX(220px); }
+    75% { transform: translateX(330px); }
+    100% { transform: translateX(0); }
+}
+
+.animatie-imagine {
+    position: relative;
+    transition: left 1s;
+}
+
+.sectiune-centrata {
+    text-align: center;
+}
+
+.sectiune-centrata h2 {
+    margin-bottom: 20px;
+}
+
+.text-stanga {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    text-align: left;
+    color: #333;
+}
+
+.componente-hardware table {
+    margin: 0 auto;
+}
+
+body {
+    background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    opacity: 0;
-    animation: slideIn 3s forwards;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
 }
 
-@keyframes slideIn {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.informatii-personale {
+    background: linear-gradient(to bottom, #303480, #8167b8);
+}
+
+.componente-hardware {
+    background: linear-gradient(to bottom, #7560b0, #00b5e2);
+}
+
+.diagrama-retea {
+    background: linear-gradient(to bottom, #05b1df, #00d8d8);
+}
+
+.caracteristici-retea {
+    background: linear-gradient(to bottom, #00d7d8, #ff9966);
+}
+
+.monitorizare-resurse {
+    background: linear-gradient(to bottom, #f49c6b, #ff5e62);
+}
+
+h1, h2 {
+    color: #fff;
+}
+
+p {
+    color: #fff;
 }
